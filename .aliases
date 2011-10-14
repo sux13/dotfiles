@@ -16,6 +16,7 @@ alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
+alias code='cd ~/Code; ls'
 alias g="git"
 alias h="history"
 alias j="jobs"
