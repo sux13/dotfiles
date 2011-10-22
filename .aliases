@@ -1,5 +1,8 @@
 alias reload='source ~/.bash_profile'
 
+# Octave
+alias octave="exec '/Applications/Octave.app/Contents/Resources/bin/octave'"
+
 # G++ display error and warnings
 alias g++='g++ -Wall -Werror'
 
