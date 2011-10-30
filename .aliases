@@ -1,4 +1,8 @@
+# reload bash profile
 alias reload='source ~/.bash_profile'
+
+# clean logs to speed up terminal loading
+alias clean='sudo rm -rf /private/var/log/asl/*'
 
 # Octave
 alias octave="exec '/Applications/Octave.app/Contents/Resources/bin/octave'"
