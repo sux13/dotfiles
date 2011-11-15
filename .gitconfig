@@ -181,3 +181,8 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
+[branch "master"]
+
+	remote = origin
+	merge = refs/heads/master
