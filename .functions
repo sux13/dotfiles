@@ -327,6 +327,7 @@ function svn() {
       elif [[ $RL =~ ^A ]]; then C=$GREEN;
       elif [[ $RL =~ ^D ]]; then C=$RED;
       elif [[ $RL =~ ^X ]]; then C=$BLUE;
+      elif [[ $RL =~ ^U ]]; then C=$BLUE;
       elif [[ $RL =~ ^! ]]; then C=$GREENBG;
       elif [[ $RL =~ ^I ]]; then C=$YELLOW;
       elif [[ $RL =~ ^R ]]; then C=$LIGHTPURPLE;
