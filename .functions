@@ -245,6 +245,11 @@ function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
 
+# Change all files of the first given extension in the current directory to have the second extension
+function changeExtensions() {
+	for i in *.$1 ; do mv "$i" "${i%.$1}.$2"; done
+}
+
 #   This function echoes a bunch of color codes to the
 #   terminal to demonstrate what's available.  Each
 #   line is the color code of one forground color,
