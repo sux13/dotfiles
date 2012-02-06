@@ -12,7 +12,7 @@ echo 'System Update'
 apt-get -y update
 echo 'Update completed'
 # Install help app
-apt-get -y install libssl-dev git-core pkg-config build-essential curl gcc g++ wget ssh openssh-client openssh-server checkinstall
+apt-get -y install libssl-dev git-core git-doc subversion pkg-config build-essential curl gcc g++ wget ssh openssh-client openssh-server checkinstall
 
 # Backup original ssh config
 cp /etc/ssh/sshd_config /etc/ssh/sshd_config.original
