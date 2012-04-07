@@ -81,6 +81,8 @@
 	}; f"
 
 	uncommit = reset --soft HEAD^
+	# Undo a `git push`
+	undopush = push -f origin HEAD^:master
 
 	# Copied from https://gist.github.com/1327258
 	l50 = "!git log --abbrev-commit --date=short --pretty=format:'%x00%h%x00%cd%x00%s%x00%an%x00%d' | gawk -F '\\0' '{ printf \"%s\\033[31m%s\\033[0m \\033[32m%s\\033[0m  %-50s \\033[30;1m%s\\033[0m\\033[33m%s\\n\", $1, $2, $3, gensub(/(.{49}).{2,}/, \"\\\\1…\",\"g\",$4), $5, $6 }' | less -R"
