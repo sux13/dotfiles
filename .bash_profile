@@ -47,6 +47,16 @@ complete -W "NSGlobalDomain" defaults;
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
+platform='unknown'
+unamestr=$(uname)
+if [[ "$unamestr" == 'Linux' ]]; then
+   platform='linux'
+elif [[ "$unamestr" == 'FreeBSD' ]]; then
+   platform='freebsd'
+elif [[ "$unamestr" == 'Darwin' ]]; then
+   platform='macos'
+fi
+
 # Starting ssh-agent to avoid having to enter passphrase for ssh keys everytime they are used
 SSH_ENV="$HOME/.ssh/environment"
 eval `ssh-agent` #fix for Unable to make connection to ssh agent error. http://funkaoshi.com/blog/could-not-open-a-connection-to-your-authentication-agent
@@ -78,13 +88,13 @@ function test_identities {
 if [ -n "$SSH_AGENT_PID" ]; then
     ps -ef | grep "$SSH_AGENT_PID" | grep ssh-agent > /dev/null
     if [ $? -eq 0 ]; then
-	test_identities
+      test_identities
     fi
 # if $SSH_AGENT_PID is not properly set, we might be able to load one from
 # $SSH_ENV
 else
     if [ -f "$SSH_ENV" ]; then
-	. "$SSH_ENV" > /dev/null
+      . "$SSH_ENV" > /dev/null
     fi
     ps -ef | grep "$SSH_AGENT_PID" | grep -v grep | grep ssh-agent > /dev/null
     if [ $? -eq 0 ]; then
