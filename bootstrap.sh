@@ -5,7 +5,7 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
+	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "linux.sh" \
 		--exclude "README.md" --exclude "LICENSE-MIT.txt" --exclude ".gitconfig" -avh --no-perms . ~;
 	cat ~/.gitconfigprivate > ~/.gitconfig
 	cat .gitconfig >> ~/.gitconfig
