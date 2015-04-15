@@ -1,41 +1,103 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+	"always_show_minimap_viewport": false,
+	"auto_complete": true,
+	"auto_complete_triggers":
+	[
+		{
+			"characters": "<",
+			"selector": "text.html"
+		},
+		{
+			"characters": "/",
+			"selector": "string.quoted.double.html,string.quoted.single.html, source.css"
+		},
+		{
+			"characters": "'",
+			"selector": "source.js,source.stylus"
+		}
+	],
+	"auto_indent": true,
+	"caret_extra_bottom": 3,
+	"caret_extra_top": 3,
+	"caret_extra_width": 2,
+	"color_scheme": "Packages/User/Seti (SL).tmTheme",
 	"default_encoding": "UTF-8",
 	"default_line_ending": "unix",
 	"detect_indentation": false,
-	"draw_white_space": "all",
-	"ensure_newline_at_eof_on_save": false,
+	"detect_slow_plugins": false,
+	"draw_minimap_border": true,
+	"draw_white_space": "selection",
+	"enable_live_count": true,
+	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
-		".DS_Store",
-		"Desktop.ini",
+		"*.a",
+		"*.class",
+		"*.db",
+		"*.dll",
+		"*.dylib",
+		"*.exe",
+		"*.idb",
+		"*.lib",
+		"*.ncb",
+		"*.o",
+		"*.obj",
+		"*.pdb",
+		"*.pdf",
+		"*.psd",
 		"*.pyc",
+		"*.pyo",
+		"*.sdf",
+		"*.so",
+		"*.suo",
 		"._*",
-		"Thumbs.db",
+		".DS_Store",
 		".Spotlight-V100",
-		".Trashes"
+		".Trashes",
+		"Desktop.ini",
+		"Thumbs.db"
 	],
 	"folder_exclude_patterns":
 	[
+		".bundle",
 		".git",
-		"node_modules"
+		".hg",
+		".sass-cache",
+		".svn",
+		"CVS",
+		"log",
+		"node_modules",
+		"tmp"
 	],
 	"font_face": "Monaco",
-	"font_size": 13,
+	"font_size": 16,
+	"highlight_line": true,
 	"highlight_modified_tabs": true,
-	"hot_exit": false,
-	"line_padding_bottom": 5,
-	"match_brackets": true,
+	"hot_exit": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"indent_subsequent_lines": true,
+	"index_exclude_patterns":
+	[
+		"*.log"
+	],
 	"match_brackets_angle": true,
-	"remember_open_files": false,
+	"overlay_scroll_bars": "enabled",
+	"remember_open_files": true,
 	"rulers":
 	[
-		80
+		80,
+		120
 	],
-	"show_encoding": true,
-	"show_line_endings": true,
+	"scala_worksheet_sync_views": true,
+	"show_panel_on_build": true,
 	"tab_size": 2,
-	"translate_tabs_to_spaces": false,
-	"trim_trailing_white_space_on_save": true,
-	"word_wrap": true
+	"theme": "Seti.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": false,
+	"use_tab_stops": true,
+	"word_wrap": false,
+	"wrap_width": 120
 }
