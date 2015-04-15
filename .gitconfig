@@ -98,7 +98,6 @@
 	whitespace = fix
 
 [core]
-	autocrlf = true
 	quotepath = false
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
