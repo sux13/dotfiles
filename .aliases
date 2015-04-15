@@ -1,15 +1,3 @@
-# reload bash profile
-alias reload='source ~/.bash_profile'
-
-# clean logs to speed up terminal loading
-alias clean='sudo rm -rf /private/var/log/asl/*'
-
-# Octave
-alias octave="exec '/Applications/Octave.app/Contents/Resources/bin/octave'"
-
-# G++ display error and warnings
-alias g++='g++ -Wall -Werror'
-
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
@@ -22,16 +10,24 @@ alias -- -="cd -"
 alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
-alias code='cd ~/Code; ls'
+alias code="cd ~/Code"
 alias g="git"
 alias h="history"
 alias j="jobs"
 
 # Git Specific
+alias gd="git diff"
+alias gs="git s"
 alias gcm="git commit -m"
 alias gcam="git commit -am"
+alias gca="git commit --amend"
+alias gcaa="git commit -a --amend"
 alias gdc="git diff --cached"
+alias gmaster="git checkout master"
+alias greset="git reset --hard"
+alias gb="git branch"
+alias glast="git checkout -"
+alias gupdate="git pull --rebase origin master"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -60,6 +56,9 @@ export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
+# Gzip-enabled `curl`
+alias gurl='curl --compressed'
+
 # Get week number
 alias week='date +%V'
 
@@ -73,6 +72,9 @@ alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+# Enhanced WHOIS lookups
+alias whois="whois -h whois-servers.net"
 
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
@@ -170,3 +172,9 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+# G++ display error and warnings
+alias g++='g++ -Wall -Werror'
+
+alias fname="find . -type f -name"
+alias fpath="find . -type f -path"

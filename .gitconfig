@@ -1,6 +1,4 @@
 [alias]
-  b = branch
-
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
@@ -13,7 +11,7 @@
 	# `git di $number` shows the diff between the state `$number` revisions ago and the current state
 	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
 
-  # Word Diff
+	# Word Diff
 	wd = diff --patch-with-stat --word-diff
 
 	# Pull in remote changes for the current repository and all its submodules
@@ -110,7 +108,6 @@
 	# [default] trailing-space: looks for spaces at the end of a line
 	# [default] space-before-tab: looks for spaces before tabs at the beginning of a line
 	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
-	# whitespace = fix,space-before-tab,tab-in-indent,trailing-space
 
 	# Make `git rebase` safer on OS X
 	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
